@@ -1,0 +1,39 @@
+%h3 Football Fun!
+%br
+%div#name
+	%label{:for => "txtname"} What's your name:
+	%input{:type => "text", :id => "txtname", :class => "text2"}
+%label{:for => "player"} Select type of player 
+%select#playertype
+	%option{:value => 'empty'}
+	%option{:value => 'QB'} Quarterback
+	%option{:value => 'RB'} Runningback
+%div#throw
+	%label{:for => "txtthrow"} Enter longest throw:
+	%input{:type => "text", :id => "txtthrow", :class => "text2"}
+%div#run
+	%label{:for => "txtrun"} Enter longest run:
+	%input{:type => "text", :id => "txtrun", :class => "text2"}
+%p
+%button{:id => "submit"} Submit
+%br
+%br
+
+%table
+	%tr
+		%th Name
+		%th Player Type
+		%th Longest Run
+		%th Longest Throw
+		%th 
+		%th
+		%th
+		%th
+
+	- @players.each do |y|
+		%tr
+			%td= y.name1
+			%td= y.playertype1
+			%td= y.txtthrow1
+			%td= y.txtrun1
+
